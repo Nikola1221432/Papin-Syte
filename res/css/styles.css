@@ -203,6 +203,91 @@ section h2{
     line-height:1.5;
 }
 
+/* Notes section */
+.notes-section{
+    max-width:1000px;
+    margin:0 auto;
+    padding:40px 20px;
+}
+
+.notes-section h2{
+    font-size:32px;
+    color:#2E3C60;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.notes-container{
+    display:flex;
+    gap:0;
+    min-height:60vh;
+}
+
+.notes-column{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.notes-column h3{
+    font-size:22px;
+    color:#2E3C60;
+    text-align:center;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.text-fields{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    flex:1;
+}
+
+.text-field{
+    flex:1;
+    border:1px solid #E1E9F4;
+    border-radius:8px;
+    padding:8px 10px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:14px;
+    color:#3B486B;
+    background:#F8FAFC;
+    resize:vertical;
+    min-height:40px;
+    transition:border-color 0.3s;
+}
+
+.text-field:focus{
+    outline:none;
+    border-color:#2E3C60;
+    background:#fff;
+}
+
+.divider{
+    width:2px;
+    background:#E1E9F4;
+    margin:0 20px;
+}
+
+.submit-btn{
+    margin-top:10px;
+    padding:10px 16px;
+    background:#2E3C60;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:background 0.3s;
+}
+
+.submit-btn:hover{
+    background:#1d2d4f;
+}
+
 /* Schedule section */
 .schedule-section table{
     width:100%;
