@@ -259,6 +259,11 @@ section h2{
     transition:border-color 0.3s;
 }
 
+/* Or more specific selector to apply to both input and textarea */
+.text-field{
+    /* Same properties as above */
+}
+
 .text-field:focus{
     outline:none;
     border-color:#2E3C60;
