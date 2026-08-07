@@ -35,6 +35,8 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.nav-link[href="index.html"]')?.classList.add('active-page-indicator');
     } else if (currentPage === 'schedule.html') {
         document.querySelector('.nav-link[href="schedule.html"]')?.classList.add('active-page-indicator');
+    } else if (currentPage === 'notes.html') {
+        document.querySelector('.nav-link[href="notes.html"]')?.classList.add('active-page-indicator');
     } else if (currentPage === 'history.html') {
         document.querySelector('.dropdown-content a[href="history.html"]')?.classList.add('active-page-indicator');
     } else if (currentPage === 'relics.html') {
