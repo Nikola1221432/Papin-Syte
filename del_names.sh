@@ -1,0 +1,1 @@
+node -e "const sqlite3=require('sqlite3'); const db=new sqlite3.Database('/home/user0/Documents/Projects/Church-of-Demetrius-of-Thessalonica/server/notes.db'); db.exec('DELETE FROM health_notes; DELETE FROM repose_notes;'); db.close();"
