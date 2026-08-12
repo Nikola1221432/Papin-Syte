@@ -293,6 +293,21 @@ section h2{
     background:#1d2d4f;
 }
 
+.notes-status{
+    margin-top:8px;
+    font-size:14px;
+    text-align:center;
+    min-height:1.2em;
+}
+
+.notes-status.success{
+    color:#2E7D32;
+}
+
+.notes-status.error{
+    color:#C0392B;
+}
+
 /* Schedule section */
 .schedule-section table{
     width:100%;
