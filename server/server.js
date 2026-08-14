@@ -30,6 +30,6 @@ function handleNotesSubmit(table) {
 app.post('/api/notes/health', handleNotesSubmit('health'));
 app.post('/api/notes/repose', handleNotesSubmit('repose'));
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
