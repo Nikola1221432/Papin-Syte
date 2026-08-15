@@ -1,14 +1,35 @@
 /* Reset */
 *{margin:0;padding:0;box-sizing:border-box;}
 
-
+/* Design tokens */
+:root{
+    --color-bg:#F7F3EA;
+    --color-card:#FFFFFF;
+    --color-text:#2B2420;
+    --color-accent:#5B1F2A;
+    --color-accent-hover:#431720;
+    --color-accent-contrast:#FFFFFF;
+    --color-gold-text:#8A6A2F;
+    --color-gold-deco:#B08D46;
+    --color-muted:#6B655C;
+    --color-border:#E4DBC8;
+    --color-hover-bg:rgba(91,31,42,0.07);
+    --color-success:#3F6B4A;
+    --color-error:#7A2430;
+    --font-heading:'Cormorant Garamond',serif;
+    --font-body:'PT Serif',serif;
+}
 
 /* Body and general styles */
 body{
-    font-family:'Lilex',sans-serif;
-    background:#F8FAFC;
-    color:#3B486B;
+    font-family:var(--font-body);
+    background:var(--color-bg);
+    color:var(--color-text);
     overflow-x:hidden;
+}
+
+h1,h2,h3{
+    font-family:var(--font-heading);
 }
 
 /* Top navigation panel */
@@ -21,31 +42,31 @@ body{
     display:flex;
     justify-content:flex-start;
     gap:12px;
-    background:#F8FAFC;
+    background:var(--color-bg);
     backdrop-filter:blur(15px);
-    border-bottom:1px solid #E1E9F4;
+    border-bottom:1px solid var(--color-border);
     z-index:10;
 }
 
 .top-panel a{
-    color:#3B486B;
+    color:var(--color-text);
     text-decoration:none;
     font-weight:500;
     padding:12px 18px;
-    border-radius:12px;
+    border-radius:6px;
     transition:all 0.3s ease;
     display:inline-block;
 }
 
 .top-panel a:hover{
-    background:#E8F0FF;
-    color:#2E3C60;
+    background:var(--color-hover-bg);
+    color:var(--color-accent);
 }
 
 .top-panel a.active-page-indicator{
-    color:#2E3C60 !important;
-    background:#E8F0FF;
-    border-bottom:3px solid #2E3C60 !important;
+    color:var(--color-accent) !important;
+    background:var(--color-hover-bg);
+    border-bottom:3px solid var(--color-accent) !important;
 }
 
 .hero-section{
@@ -63,7 +84,7 @@ body{
     content:'';
     position:absolute;
     inset:0;
-    background:radial-gradient(circle at top left,rgba(248,250,252,0.15) 0%,rgba(248,250,252,0) 60%);
+    background:radial-gradient(ellipse at center,rgba(43,36,32,0.45) 0%,rgba(43,36,32,0.2) 60%,rgba(43,36,32,0.35) 100%);
     z-index:1;
     pointer-events:none;
 }
@@ -71,7 +92,7 @@ body{
     width:100%;
     height:100%;
     object-fit:cover;
-    filter:contrast(1.15) brightness(0.85) saturate(0.7) blur(2px);
+    filter:contrast(1.1) brightness(0.8) sepia(0.15) saturate(0.85) blur(2px);
 }
 .title-container{
     position:absolute;
@@ -80,7 +101,7 @@ body{
     align-items:center;
     justify-content:center;
     padding:60px;
-    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+    text-shadow:0 2px 10px rgba(0,0,0,0.6);
     backdrop-filter:blur(0px);
 }
 .title-container::before,
@@ -91,8 +112,8 @@ body{
     transform:translateY(-50%);
     width:2px;
     height:100px;
-    /*background:linear-gradient(180deg,transparent,#1d81b4,transparent);*/
-    opacity:0.3;
+    background:linear-gradient(180deg,transparent,var(--color-gold-deco),transparent);
+    opacity:0.4;
 }
 .title-container::before{left:20px;}
 .title-container::after{right:20px;}
@@ -102,12 +123,12 @@ body{
     font-weight:400;
     letter-spacing:0.08em;
     line-height:1.25;
-    color:#2E3C60;
+    color:var(--color-bg);
     text-align:center;
 }
 .title-container h1::first-letter{
     font-size:1.3em;
-    color:#3B486B;
+    color:var(--color-gold-deco);
 }
 .title-container h1::before,
 .title-container h1::after{
@@ -115,9 +136,9 @@ body{
     display:block;
     width:50px;
     height:1px;
-    background:#3B486B;
+    background:var(--color-gold-deco);
     margin:0 auto 1.5rem;
-    opacity:0.3;
+    opacity:0.5;
 }
 .title-container h1::after{
     margin:1.5rem auto 0;
@@ -131,40 +152,40 @@ body{
 .dropdown .nav-link{
     padding:12px 18px;
     transition:all 0.3s;
-    color:#3B486B;
+    color:var(--color-text);
 }
 .dropdown-content{
     display:none;
     position:absolute;
     min-width:160px;
     z-index:1;
-    background-color:#F8FAFC;
-    border:1px solid #E1E9F4;
-    border-radius:12px;
+    background-color:var(--color-card);
+    border:1px solid var(--color-border);
+    border-radius:6px;
     padding:8px;
-    box-shadow:0 4px 12px rgba(59,72,107,0.08);
+    box-shadow:0 4px 12px rgba(43,36,32,0.1);
     right:0;
 }
 .dropdown:hover .dropdown-content{
     display:block;
 }
 .dropdown-content a{
-    color:#3B486B;
+    color:var(--color-text);
     padding:10px 16px;
     text-decoration:none;
     display:block;
-    border-radius:8px;
+    border-radius:4px;
     transition:background 0.2s;
 }
 .dropdown-content a:hover{
-    background-color:#E8F0FF;
+    background-color:var(--color-hover-bg);
 }
 
 /* Page content */
 .page-content{
     padding-top:80px;
     min-height:100vh;
-    background:#F8FAFC;
+    background:var(--color-bg);
 }
 
 /* Sections */
@@ -175,7 +196,7 @@ section{
 }
 section h2{
     font-size:32px;
-    color:#2E3C60;
+    color:var(--color-accent);
     margin-bottom:20px;
     text-align:center;
 }
@@ -187,7 +208,7 @@ section h2{
 }
 .relics-list li{
     margin-bottom:12px;
-    color:#3B486B;
+    color:var(--color-text);
     line-height:1.5;
 }
 
@@ -199,7 +220,7 @@ section h2{
 }
 .notes-section h2{
     font-size:32px;
-    color:#2E3C60;
+    color:var(--color-accent);
     margin-bottom:30px;
     text-align:center;
 }
@@ -216,10 +237,16 @@ section h2{
 }
 .notes-column h3{
     font-size:22px;
-    color:#2E3C60;
+    color:var(--color-accent);
     text-align:center;
     margin-bottom:10px;
     font-weight:600;
+}
+.notes-column[data-note-type="health"] h3{
+    color:var(--color-success);
+}
+.notes-column[data-note-type="repose"] h3{
+    color:var(--color-error);
 }
 .text-fields{
     display:flex;
@@ -229,45 +256,42 @@ section h2{
 }
 .text-field{
     flex:1;
-    border:1px solid #E1E9F4;
-    border-radius:8px;
+    border:1px solid var(--color-border);
+    border-radius:6px;
     padding:8px 10px;
-    font-family:'Cormorant Garamond',serif;
+    font-family:var(--font-body);
     font-size:14px;
-    color:#3B486B;
-    background:#F8FAFC;
+    color:var(--color-text);
+    background:var(--color-bg);
     resize:vertical;
     min-height:40px;
     transition:border-color 0.3s;
 }
-/* Or more specific selector to apply to both input and textarea */
-.text-field{
-    /* Same properties as above */
-}
 .text-field:focus{
     outline:none;
-    border-color:#2E3C60;
-    background:#fff;
+    border-color:var(--color-accent);
+    background:var(--color-card);
 }
 .divider{
-    width:2px;
-    background:#E1E9F4;
+    width:1px;
+    background:var(--color-gold-deco);
+    opacity:0.5;
     margin:0 20px;
 }
 .submit-btn{
     margin-top:10px;
     padding:10px 16px;
-    background:#2E3C60;
-    color:#fff;
+    background:var(--color-accent);
+    color:var(--color-accent-contrast);
     border:none;
-    border-radius:8px;
+    border-radius:6px;
     font-size:15px;
     font-weight:600;
     cursor:pointer;
     transition:background 0.3s;
 }
 .submit-btn:hover{
-    background:#1d2d4f;
+    background:var(--color-accent-hover);
 }
 .notes-status{
     margin-top:8px;
@@ -276,10 +300,10 @@ section h2{
     min-height:1.2em;
 }
 .notes-status.success{
-    color:#2E7D32;
+    color:var(--color-success);
 }
 .notes-status.error{
-    color:#C0392B;
+    color:var(--color-error);
 }
 
 /* Schedule section */
@@ -290,9 +314,15 @@ section h2{
 }
 .schedule-section th,
 .schedule-section td{
-    border:1px solid #E1E9F4;
+    border:1px solid var(--color-border);
     padding:12px;
     text-align:center;
+}
+.schedule-section th{
+    background:var(--color-accent);
+    color:var(--color-accent-contrast);
+    font-family:var(--font-heading);
+    font-weight:600;
 }
 
 /* Media queries */
@@ -306,7 +336,7 @@ section h2{
     .top-panel a{padding:8px 12px;font-size:13px;}
     .hero-section{flex-direction:column;margin-top:55px;}
     .photo-container{height:55vh;}
-    .photo-container::before{background:linear-gradient(180deg,rgba(59,72,107,0.5) 0%,rgba(232,240,255,0.1) 50%,rgba(59,72,107,0.4) 100%);}
+    .photo-container::before{background:linear-gradient(180deg,rgba(43,36,32,0.55) 0%,rgba(43,36,32,0.15) 50%,rgba(43,36,32,0.5) 100%);}
     .title-container{height:45vh;padding:30px;}
     .title-container h1{letter-spacing:0.05em;}
     .page-content{padding-top:70px;}
@@ -318,9 +348,4 @@ section h2{
     .photo-container{height:50vh;}
     .title-container{height:50vh;padding:24px;}
     .title-container h1{letter-spacing:0.03em;}
-}
-
-/* Custom: make "О здравии" title red */
-.notes-column[data-note-type="health"] h3 {
-    color: red;
 }
