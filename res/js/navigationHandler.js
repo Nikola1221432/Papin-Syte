@@ -39,10 +39,6 @@ window.addEventListener("DOMContentLoaded", () => {
     document
       .querySelector('.nav-link[href="index.html"]')
       ?.classList.add("active-page-indicator");
-  } else if (currentPage === "schedule.html") {
-    document
-      .querySelector('.nav-link[href="schedule.html"]')
-      ?.classList.add("active-page-indicator");
   } else if (currentPage === "notes.html") {
     document
       .querySelector('.nav-link[href="notes.html"]')
