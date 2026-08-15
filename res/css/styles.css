@@ -83,7 +83,6 @@ body{
     text-shadow: 0 0 8px rgba(0,0,0,0.8);
     backdrop-filter:blur(0px);
 }
-
 .title-container::before,
 .title-container::after{
     content:'';
@@ -95,7 +94,6 @@ body{
     /*background:linear-gradient(180deg,transparent,#1d81b4,transparent);*/
     opacity:0.3;
 }
-
 .title-container::before{left:20px;}
 .title-container::after{right:20px;}
 
@@ -107,12 +105,10 @@ body{
     color:#2E3C60;
     text-align:center;
 }
-
 .title-container h1::first-letter{
     font-size:1.3em;
     color:#3B486B;
 }
-
 .title-container h1::before,
 .title-container h1::after{
     content:'';
@@ -123,7 +119,6 @@ body{
     margin:0 auto 1.5rem;
     opacity:0.3;
 }
-
 .title-container h1::after{
     margin:1.5rem auto 0;
 }
@@ -133,13 +128,11 @@ body{
     position:relative;
     display:inline-block;
 }
-
 .dropdown .nav-link{
     padding:12px 18px;
     transition:all 0.3s;
     color:#3B486B;
 }
-
 .dropdown-content{
     display:none;
     position:absolute;
@@ -152,11 +145,9 @@ body{
     box-shadow:0 4px 12px rgba(59,72,107,0.08);
     right:0;
 }
-
 .dropdown:hover .dropdown-content{
     display:block;
 }
-
 .dropdown-content a{
     color:#3B486B;
     padding:10px 16px;
@@ -165,7 +156,6 @@ body{
     border-radius:8px;
     transition:background 0.2s;
 }
-
 .dropdown-content a:hover{
     background-color:#E8F0FF;
 }
@@ -183,7 +173,6 @@ section{
     margin:0 auto;
     padding:40px 20px;
 }
-
 section h2{
     font-size:32px;
     color:#2E3C60;
@@ -196,7 +185,6 @@ section h2{
     list-style-type:decimal;
     padding-left:20px;
 }
-
 .relics-list li{
     margin-bottom:12px;
     color:#3B486B;
@@ -209,27 +197,23 @@ section h2{
     margin:0 auto;
     padding:40px 20px;
 }
-
 .notes-section h2{
     font-size:32px;
     color:#2E3C60;
     margin-bottom:30px;
     text-align:center;
 }
-
 .notes-container{
     display:flex;
     gap:0;
     min-height:60vh;
 }
-
 .notes-column{
     flex:1;
     display:flex;
     flex-direction:column;
     gap:10px;
 }
-
 .notes-column h3{
     font-size:22px;
     color:#2E3C60;
@@ -237,14 +221,12 @@ section h2{
     margin-bottom:10px;
     font-weight:600;
 }
-
 .text-fields{
     display:flex;
     flex-direction:column;
     gap:10px;
     flex:1;
 }
-
 .text-field{
     flex:1;
     border:1px solid #E1E9F4;
@@ -258,24 +240,20 @@ section h2{
     min-height:40px;
     transition:border-color 0.3s;
 }
-
 /* Or more specific selector to apply to both input and textarea */
 .text-field{
     /* Same properties as above */
 }
-
 .text-field:focus{
     outline:none;
     border-color:#2E3C60;
     background:#fff;
 }
-
 .divider{
     width:2px;
     background:#E1E9F4;
     margin:0 20px;
 }
-
 .submit-btn{
     margin-top:10px;
     padding:10px 16px;
@@ -288,22 +266,18 @@ section h2{
     cursor:pointer;
     transition:background 0.3s;
 }
-
 .submit-btn:hover{
     background:#1d2d4f;
 }
-
 .notes-status{
     margin-top:8px;
     font-size:14px;
     text-align:center;
     min-height:1.2em;
 }
-
 .notes-status.success{
     color:#2E7D32;
 }
-
 .notes-status.error{
     color:#C0392B;
 }
@@ -314,7 +288,6 @@ section h2{
     border-collapse:collapse;
     margin-top:20px;
 }
-
 .schedule-section th,
 .schedule-section td{
     border:1px solid #E1E9F4;
@@ -327,7 +300,6 @@ section h2{
     .top-panel{padding:6px 16px;gap:10px;}
     .title-container{padding:40px;}
 }
-
 @media (max-width:768px){
     body{font-size:15px;}
     .top-panel{padding:12px 20px;gap:16px;}
@@ -340,11 +312,15 @@ section h2{
     .page-content{padding-top:70px;}
     .dropdown-content{right:auto;left:0;}
 }
-
 @media (max-width:480px){
     .top-panel{gap:12px;}
     .top-panel a{font-size:12px;padding:6px 10px;}
     .photo-container{height:50vh;}
     .title-container{height:50vh;padding:24px;}
     .title-container h1{letter-spacing:0.03em;}
+}
+
+/* Custom: make "О здравии" title red */
+.notes-column[data-note-type="health"] h3 {
+    color: red;
 }
