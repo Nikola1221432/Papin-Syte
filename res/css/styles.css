@@ -96,13 +96,13 @@ h1,h2,h3{
 }
 .title-container{
     position:absolute;
-    inset:0;
+    left:20px;
+    top:50px;
     display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:60px;
+    align-items:flex-start;
+    justify-content:flex-start;
+    padding:20px;
     text-shadow:0 2px 10px rgba(0,0,0,0.6);
-    backdrop-filter:blur(0px);
 }
 .title-container::before,
 .title-container::after{
@@ -124,7 +124,7 @@ h1,h2,h3{
     letter-spacing:0.08em;
     line-height:1.25;
     color:var(--color-bg);
-    text-align:center;
+    text-align:left;
 }
 .title-container h1::first-letter{
     font-size:1.3em;
