@@ -54,6 +54,12 @@ h3 {
   z-index: 10;
 }
 
+.yoomoney {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
 .desktop-nav {
   display: flex;
   align-items: center;
@@ -359,7 +365,9 @@ section h2 {
     width: 24px;
     height: 2px;
     background: var(--color-accent);
-    transition: transform 0.22s ease, opacity 0.22s ease;
+    transition:
+      transform 0.22s ease,
+      opacity 0.22s ease;
   }
   .menu-toggle:hover,
   .menu-toggle:focus-visible {
