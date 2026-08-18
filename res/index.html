@@ -131,7 +131,6 @@
       (function() {
         var phone = document.querySelector('.contact-phone');
         if (phone && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-          phone.style.cursor = 'pointer';
           phone.onclick = function() {
             window.location.href = 'tel:+79180132610';
           };
