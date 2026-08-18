@@ -116,26 +116,7 @@
           Настоятель храма<br />
           свещеник Антоний Грицаев
         </p>
-        <p class="contact-phone" onclick="
-  var t = '+79180132610';
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (isMobile) {
-    window.location.href = 'tel:' + t;
-  } else {
-    var r = document.createRange();
-    r.selectNodeContents(this);
-    var s = window.getSelection();
-    s.removeAllRanges();
-    s.addRange(r);
-    try {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(t);
-      } else {
-        document.execCommand('copy');
-      }
-    } catch (e) {}
-  }
-">+7 (918) 013-26-10</p>
+        <p class="contact-phone">+7 (918) 013-26-10</p>
       </div>
 
       <a href="https://vk.ru/hram.hadzhokh" class="social-btn vk">Наш ВК</a>
@@ -146,5 +127,16 @@
       >
     </section>
     <script src="js/navigationHandler.js"></script>
+    <script>
+      (function() {
+        var phone = document.querySelector('.contact-phone');
+        if (phone && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+          phone.style.cursor = 'pointer';
+          phone.onclick = function() {
+            window.location.href = 'tel:+79180132610';
+          };
+        }
+      })();
+    </script>
   </body>
 </html>
