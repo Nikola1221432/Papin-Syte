@@ -84,7 +84,7 @@ h3 {
   width: 100%;
   height: 100%;
 }
-.photo-container::before {
+/* .photo-container::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -96,7 +96,7 @@ h3 {
   );
   z-index: 1;
   pointer-events: none;
-}
+} */
 .photo-container img {
   width: 100%;
   height: 100%;
