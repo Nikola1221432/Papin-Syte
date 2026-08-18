@@ -348,6 +348,7 @@ section h2 {
     display: none;
   }
   .menu-toggle {
+    margin-right: auto;
     display: inline-flex;
     width: 48px;
     height: 44px;
@@ -387,7 +388,7 @@ section h2 {
   .mobile-menu {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     bottom: 0;
     z-index: 21;
     display: block;
