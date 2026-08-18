@@ -12,13 +12,30 @@
   </head>
   <body>
     <header class="top-panel">
-      <nav>
+      <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Открыть меню</span>
+      </button>
+      <nav class="desktop-nav">
         <a href="index.html" class="nav-link">Главное</a>
         <a href="notes.html" class="nav-link">Записки</a>
         <a href="history.html" class="nav-link">История храма</a>
         <a href="relics.html" class="nav-link">Святыни храма</a>
       </nav>
     </header>
+    <div class="mobile-menu-backdrop" data-menu-close></div>
+    <aside class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Навигация по сайту">
+      <div class="mobile-menu-header">
+        <span>Разделы сайта</span>
+        <button class="menu-close" type="button" data-menu-close aria-label="Закрыть меню">&times;</button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="index.html" class="nav-link">Главное</a>
+        <a href="notes.html" class="nav-link active-page-indicator">Записки</a>
+        <a href="history.html" class="nav-link">История храма</a>
+        <a href="relics.html" class="nav-link">Святыни храма</a>
+      </nav>
+    </aside>
     <main class="page-content">
       <section class="notes-section">
         <h2>Записки</h2>
