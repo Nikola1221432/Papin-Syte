@@ -203,7 +203,7 @@ section h2 {
 /* Relics list */
 .relics-list {
   list-style-type: decimal;
-  /* font-size: 17px; */
+  font-size: 17px;
   padding-left: 20px;
 }
 .relics-list li {
