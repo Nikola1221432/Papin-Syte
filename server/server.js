@@ -3,7 +3,7 @@ const express = require("express");
 const { insertNames } = require("./db");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 const MAX_NAMES = 10;
 
 app.use(express.json());
