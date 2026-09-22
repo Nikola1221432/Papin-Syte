@@ -7,7 +7,9 @@ const PORT = process.env.PORT || 3000;
 const MAX_NAMES = 10;
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "..", "res")));
+app.use(
+  express.static(path.join(__dirname, "..", "res"), { extensions: ["html"] }),
+);
 
 function handleNotesSubmit(table) {
   return (req, res) => {
