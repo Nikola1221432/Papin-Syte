@@ -9,6 +9,32 @@ const MAX_NAMES = 10;
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "res")));
 
+const { SitemapStream, streamToPromise } = require("sitemap");
+const { Readable } = require("stream");
+
+// Генерация Sitemap для Google
+app.get("/sitemap.xml", async (req, res) => {
+  try {
+    const links = [
+      { url: "/", changefreq: "daily", priority: 1.0 },
+      { url: "/notes.html", changefreq: "weekly", priority: 0.8 },
+      { url: "/history.html", changefreq: "weekly", priority: 0.8 },
+      { url: "/relics.html", changefreq: "weekly", priority: 0.8 },
+    ];
+
+    const stream = new SitemapStream({
+      hostname: "https://hram-dimitriya-adigeya.ru",
+    });
+    res.header("Content-Type", "application/xml");
+
+    const xmlString = await streamToPromise(Readable.from(links).pipe(stream));
+    res.send(xmlString.toString());
+  } catch (e) {
+    console.error(e);
+    res.status(500).end();
+  }
+});
+
 function handleNotesSubmit(table) {
   return (req, res) => {
     const rawNames = Array.isArray(req.body?.names) ? req.body.names : [];
